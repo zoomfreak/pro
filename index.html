@@ -3,57 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Will You Be Mine? 💖</title>
+    <title>Happy Women's Day</title>
     <style>
         body {
-            background-color: #ffebf3;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
             text-align: center;
-            font-family: 'Arial', sans-serif;
-            color: #d63384;
-            padding-top: 50px;
+            color: #fff;
+            overflow: hidden;
         }
         .container {
-            background: white;
-            width: 60%;
-            margin: auto;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 0 15px pink;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            position: relative;
         }
-        .heart {
-            font-size: 50px;
-            animation: heartbeat 1s infinite;
+        h1 {
+            font-size: 3.5rem;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+            animation: fadeIn 2s ease-in-out;
         }
-        @keyframes heartbeat {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.2); }
-            100% { transform: scale(1); }
+        p {
+            font-size: 1.7rem;
+            margin: 20px;
+            font-weight: 300;
+            animation: fadeIn 2.5s ease-in-out;
         }
-        .button {
-            background-color: #ff66b2;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            font-size: 18px;
-            cursor: pointer;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            margin: 10px;
+        .flower {
+            width: 220px;
+            height: 220px;
+            background: url('https://cdn.pixabay.com/photo/2020/03/08/07/26/women-4911653_960_720.jpg') no-repeat center;
+            background-size: cover;
+            border-radius: 50%;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4);
+            margin-top: 20px;
+            animation: zoomIn 1.5s ease-in-out;
         }
-        .button:hover {
-            background-color: #ff3385;
+        .decor { 
+            position: absolute; 
+            width: 100%; 
+            height: 100%; 
+            top: 0; 
+            left: 0; 
+            pointer-events: none;
+        }
+        .circle {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            animation: float 6s infinite ease-in-out;
+        }
+        .circle:nth-child(1) {
+            top: 10%;
+            left: 20%;
+            animation-delay: 0s;
+        }
+        .circle:nth-child(2) {
+            top: 50%;
+            left: 70%;
+            animation-delay: 2s;
+        }
+        .circle:nth-child(3) {
+            top: 80%;
+            left: 30%;
+            animation-delay: 4s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes zoomIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1 class="heart">💖 I love you.. Will You Be Mine? 💖</h1>
-        <p>From the very first moment I saw you, my heart whispered, "This is special." 
-        You light up my world with your smile, your kindness, and the way you make everything feel magical. 
-        Every day with you is a dream, and I never want to wake up. 
-        So, here I am, with all my heart, asking... Will you be my forever? 💕</p>
-        <button class="button" onclick="alert('Yay! You made my heart the happiest! 💕')">Yes! 💕</button>
-        <button class="button" onclick="alert('Oh no! But I will still cherish you! 💖')">No 😢</button>
+        <h1>Happy Women's Day!</h1>
+        <p>Celebrating the power, grace, and beauty of women everywhere. You inspire the world!</p>
+        <div class="flower"></div>
+    </div>
+    <div class="decor">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
     </div>
 </body>
 </html>
